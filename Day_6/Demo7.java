@@ -3,7 +3,7 @@ package Day_6;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Demo1 {
+public class Demo7 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int a,b,c;
@@ -14,9 +14,7 @@ public class Demo1 {
             b = sc.nextInt();
             c = a/b;
             System.out.println("Result : "+c);
-        }catch (ArithmeticException e) {
-            System.out.println(e.getMessage());
-        }catch (InputMismatchException e){  //Multiple catch blokcs also allowed here
+        }catch (ArithmeticException | InputMismatchException e) {
             System.out.println(e.getMessage());
         }
     }
